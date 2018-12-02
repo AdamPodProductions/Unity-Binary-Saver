@@ -733,7 +733,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 441301040}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 624814865}
+        m_MethodName: Save
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &441301040
@@ -1009,6 +1020,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f7417b57ed8d348afee5840b44aa86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameText: {fileID: 655915061}
+  levelText: {fileID: 81318515}
+  healthText: {fileID: 1766894043}
+  xText: {fileID: 1861882247}
+  yText: {fileID: 853093131}
+  zText: {fileID: 1040398824}
 --- !u!1 &627348480
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,7 +2120,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1506784426}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 624814865}
+        m_MethodName: Load
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1506784426
