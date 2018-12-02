@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class UnityBinarySaver
 {
-    public static void SavePlayer(Player player, string filename)
+    public static void Save(Player player, string filename)
     {
         BinaryFormatter formatter = new BinaryFormatter();
 
@@ -15,7 +15,7 @@ public static class UnityBinarySaver
         stream.Close();
     }
 
-    public static Player LoadPlayer(string filename)
+    public static Player Load(string filename)
     {
         string path = Application.persistentDataPath + "/" + filename;
         if (File.Exists(path))
