@@ -4,18 +4,18 @@ using UnityEngine;
 
 public static class UnityBinarySaver
 {
-    public static void Save(Player player, string filename)
+    public static void Save<T>(T objectToSave, string filename)
     {
         BinaryFormatter formatter = new BinaryFormatter();
 
         string path = Application.persistentDataPath + "/" + filename;
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        formatter.Serialize(stream, player);
+        formatter.Serialize(stream, objectToSave);
         stream.Close();
     }
 
-    public static Player Load(string filename)
+    public static T Load<T>(string filename)
     {
         string path = Application.persistentDataPath + "/" + filename;
         if (File.Exists(path))
@@ -23,15 +23,15 @@ public static class UnityBinarySaver
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
 
-            Player player = formatter.Deserialize(stream) as Player;
+            T objectToLoad = (T)formatter.Deserialize(stream);
             stream.Close();
 
-            return player;
+            return objectToLoad;
         }
         else
         {
             Debug.LogError("File not found at " + path);
-            return null;
+            return default(T);
         }
     }
 }

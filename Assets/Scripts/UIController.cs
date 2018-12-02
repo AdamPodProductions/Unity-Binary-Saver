@@ -28,7 +28,7 @@ public class UIController : MonoBehaviour
 
     public void Load()
     {
-        player = UnityBinarySaver.Load("player.ubs");
+        player = UnityBinarySaver.Load<Player>("player.ubs");
 
         nameText.text = player.name;
         levelText.text = player.level.ToString();
